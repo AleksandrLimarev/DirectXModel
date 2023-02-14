@@ -1,6 +1,9 @@
 ﻿  AppWindow.cpp
+  DeviceContext.cpp
   GraphicsEngine.cpp
-  Window.cpp
   main.cpp
+  SwapChain.cpp
+  VertexBuffer.cpp
+  Window.cpp
   Generating Code...
   DirectXModel.vcxproj -> \\Mac\Home\Desktop\DirectXModel\Debug\DirectXModel.exe

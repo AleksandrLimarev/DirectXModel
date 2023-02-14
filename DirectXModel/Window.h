@@ -13,6 +13,12 @@ class Window
 		bool release();
 		bool isRun();
 
+
+		RECT getClientWindowRect();
+		void setHWND(HWND hwnd) {
+			this->m_hwnd = hwnd;
+		}
+
 		virtual void onCreate()=0;
 		virtual void onUpdate()=0;
 		virtual void onDestroy();
