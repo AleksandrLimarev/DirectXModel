@@ -1,10 +1,27 @@
 ﻿  AppWindow.cpp
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(38,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(39,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(40,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(41,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(46,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(47,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(48,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(49,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(54,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(55,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(56,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\Matrix4x4.h(57,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+\\Mac\Home\Desktop\DirectXModel\DirectXModel\AppWindow.cpp(150,139): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
+  ConstantBuffer.cpp
   DeviceContext.cpp
   GraphicsEngine.cpp
+  IndexBuffer.cpp
+  main.cpp
+  PixelShader.cpp
+  RenderSystem.cpp
   SwapChain.cpp
   VertexBuffer.cpp
   VertexShader.cpp
   Window.cpp
-  main.cpp
   Generating Code...
   DirectXModel.vcxproj -> \\Mac\Home\Desktop\DirectXModel\x64\Debug\DirectXModel.exe
