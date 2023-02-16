@@ -85,7 +85,7 @@ AppWindow::~AppWindow()
 void AppWindow::onCreate()
 {
 	Window::onCreate();
-	GraphicsEngine::get()->init();
+	//GraphicsEngine::get()->init();
 	
 
 	RECT rc = this->getClientWindowRect();
@@ -213,5 +213,4 @@ void AppWindow::onUpdate()
 void AppWindow::onDestroy()
 {
 	Window::onDestroy();
-	GraphicsEngine::get()->release();
 }

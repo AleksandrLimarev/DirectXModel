@@ -4,14 +4,30 @@
 
 int main()
 {
-	AppWindow app;
-	if (app.init())
+	try
 	{
-		while (app.isRun())
+		GraphicsEngine::create();
+		
+	}
+	catch (...) { return -1; }
+
+	
+
+	{
+		try
 		{
-			app.broadcast();
+			AppWindow app;
+			while (app.isRun());
+		}
+		catch (...) {
+			
+			GraphicsEngine::release();
+			return -1;
 		}
 	}
+
+	
+	GraphicsEngine::release();
 
 	return 0;
 }
