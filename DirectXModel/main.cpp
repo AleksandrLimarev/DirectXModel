@@ -1,5 +1,5 @@
 #include "AppWindow.h"
-
+#include "InputSystem.h"
 
 
 int main()
@@ -7,11 +7,9 @@ int main()
 	try
 	{
 		GraphicsEngine::create();
-		
+		InputSystem::create();
 	}
 	catch (...) { return -1; }
-
-	
 
 	{
 		try
@@ -20,13 +18,13 @@ int main()
 			while (app.isRun());
 		}
 		catch (...) {
-			
+			InputSystem::release();
 			GraphicsEngine::release();
 			return -1;
 		}
 	}
 
-	
+	InputSystem::release();
 	GraphicsEngine::release();
 
 	return 0;

@@ -6,9 +6,9 @@
 class RenderSystem
 {
 public:
-
+	//Initialize the GraphicsEngine and DirectX 11 Device
 	RenderSystem();
-	
+	//Release all the resources loaded
 	~RenderSystem();
 public:
 	SwapChainPtr createSwapChain(HWND hwnd, UINT width, UINT height);
@@ -51,5 +51,5 @@ private:
 	friend class ConstantBuffer;
 	friend class VertexShader;
 	friend class PixelShader;
-
+	friend class Texture;
 };

@@ -2,7 +2,6 @@
 #include <d3d11.h>
 #include "Prerequisites.h"
 
-
 class ConstantBuffer
 {
 public:

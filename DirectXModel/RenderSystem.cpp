@@ -46,11 +46,11 @@ RenderSystem::RenderSystem()
 	m_d3d_device->QueryInterface(__uuidof(IDXGIDevice), (void**)&m_dxgi_device);
 	m_dxgi_device->GetParent(__uuidof(IDXGIAdapter), (void**)&m_dxgi_adapter);
 	m_dxgi_adapter->GetParent(__uuidof(IDXGIFactory), (void**)&m_dxgi_factory);
-
 }
 
 RenderSystem::~RenderSystem()
 {
+
 	if (m_vsblob)m_vsblob->Release();
 	if (m_psblob)m_psblob->Release();
 
@@ -59,9 +59,7 @@ RenderSystem::~RenderSystem()
 	m_dxgi_factory->Release();
 
 	m_d3d_device->Release();
-
 }
-
 
 SwapChainPtr RenderSystem::createSwapChain(HWND hwnd, UINT width, UINT height)
 {
