@@ -8,6 +8,8 @@
   GraphicsEngine.cpp
   IndexBuffer.cpp
   InputSystem.cpp
+  Mesh.cpp
+  MeshManager.cpp
   PixelShader.cpp
   RenderSystem.cpp
   Resource.cpp
