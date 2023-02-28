@@ -24,6 +24,8 @@ public:
 	virtual void onDestroy() override;
 	virtual void onFocus() override;
 	virtual void onKillFocus() override;
+	virtual void onSize() override;
+
 
 	// Inherited via InputListener
 	virtual void onKeyDown(int key) override;
@@ -35,13 +37,14 @@ public:
 	virtual void onRightMouseDown(const Point& mouse_pos) override;
 	virtual void onRightMouseUp(const Point& mouse_pos) override;
 public:
+	void render();
 	void update();
-	void updateModel();
+	void updateModel(Vector3D position, const MaterialPtr& material);
 	void updateCamera();
 	void updateSkyBox();
+	void updateLight();
 
-	void drawMesh(const MeshPtr& mesh, const VertexShaderPtr& vs, const PixelShaderPtr& ps, const ConstantBufferPtr& cb,
-		const TexturePtr& tex);
+	void drawMesh(const MeshPtr& mesh, const MaterialPtr& material);
 
 private:
 	SwapChainPtr m_swap_chain;
@@ -50,10 +53,25 @@ private:
 	PixelShaderPtr m_sky_ps;
 	ConstantBufferPtr m_cb;
 	ConstantBufferPtr m_sky_cb;
-	TexturePtr m_wood_tex;
+	TexturePtr m_wall_tex;
+	TexturePtr m_bricks_tex;
+	TexturePtr m_earth_color_tex;
+	TexturePtr m_earth_spec_tex;
+	TexturePtr m_earth_night_tex;
+	TexturePtr m_clouds_tex;
+
 	TexturePtr m_sky_tex;
 	MeshPtr m_mesh;
+	MeshPtr m_torus_mesh;
+	MeshPtr m_suzanne_mesh;
+	MeshPtr m_plane_mesh;
 	MeshPtr m_sky_mesh;
+
+	MaterialPtr m_mat;
+	MaterialPtr m_bricks_mat;
+	MaterialPtr m_earth_mat;
+
+	MaterialPtr m_sky_mat;
 private:
 	long m_old_delta;
 	long m_new_delta;
@@ -77,4 +95,14 @@ private:
 	Matrix4x4 m_world_cam;
 	Matrix4x4 m_view_cam;
 	Matrix4x4 m_proj_cam;
+
+	float m_time = 0.0f;
+	float m_light_radius = 8.0f;
+	float m_attenuation = 2.0f;
+	bool m_anim = false;
+
+	bool m_play_state = false;
+	bool m_fullscreen_state = false;
+
+	Vector4D m_light_position;
 };

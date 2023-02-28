@@ -52,6 +52,15 @@
     <Filter Include="GameEngine\ResourceManager\MeshManager">
       <UniqueIdentifier>{9ae2c007-eb5e-41db-8a17-52aa75208aee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="App\EarthShader">
+      <UniqueIdentifier>{68c6e74a-4984-4f7c-8927-005f4baf98a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App\PointLightShader">
+      <UniqueIdentifier>{1dbf0f97-34f0-479f-ad7a-2f8cbcbff9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\GraphicsEngine\Material">
+      <UniqueIdentifier>{b67097d7-ae13-4c3c-bbda-774702581d84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -110,6 +119,9 @@
     </ClCompile>
     <ClCompile Include="MeshManager.cpp">
       <Filter>GameEngine\ResourceManager\MeshManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>GameEngine\GraphicsEngine\Material</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -191,15 +203,12 @@
     <ClInclude Include="VertexMesh.h">
       <Filter>GameEngine\FknMath</Filter>
     </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>GameEngine\GraphicsEngine\Material</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="VertexShader.hlsl">
-      <Filter>App</Filter>
-    </FxCompile>
     <FxCompile Include="Shader.fx">
-      <Filter>App</Filter>
-    </FxCompile>
-    <FxCompile Include="PixelShader.hlsl">
       <Filter>App</Filter>
     </FxCompile>
     <FxCompile Include="VertexMeshLayoutShader.hlsl">
@@ -207,6 +216,18 @@
     </FxCompile>
     <FxCompile Include="SkyBoxShader.hlsl">
       <Filter>App</Filter>
+    </FxCompile>
+    <FxCompile Include="VertexShader.hlsl">
+      <Filter>App\EarthShader</Filter>
+    </FxCompile>
+    <FxCompile Include="PixelShader.hlsl">
+      <Filter>App\EarthShader</Filter>
+    </FxCompile>
+    <FxCompile Include="PointLightPixelShader.hlsl">
+      <Filter>App\PointLightShader</Filter>
+    </FxCompile>
+    <FxCompile Include="PointLightVertexShader.hlsl">
+      <Filter>App\PointLightShader</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>
